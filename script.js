@@ -1,13 +1,7 @@
-
 // documents
 const toggleBtn = document.querySelector('.toggle-button');
 const navbar = document.querySelector('.navbar');
-const imgEl = document.querySelector("#cover");
 
-// Events 
-toggleBtn.addEventListener('click', function(){
-    navbar.classList.toggle('active');
-});
 
 const data =[
     {
@@ -17,7 +11,7 @@ const data =[
       "originalTitle": "Breaking Bad",
       "type": "tvSeries",
       "description": "A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student to secure his family's future.",
-      "primaryImage": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_.jpg",
+      primaryImage: "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_.jpg",
       "trailer": "https://www.youtube.com/watch?v=XZ8daibM3AE",
       "contentRating": "TV-MA",
       "startYear": 2008,
@@ -77,11 +71,11 @@ const data =[
     {
       "id": "tt5491994",
       "url": "https://www.imdb.com/title/tt5491994/",
-      "primaryTitle": "Planet Earth II",
+      primaryTitle: "Planet Earth II",
       "originalTitle": "Planet Earth II",
       "type": "tvMiniSeries",
       "description": "David Attenborough returns with a new wildlife documentary that shows life in a variety of habitats.",
-      "primaryImage": "https://m.media-amazon.com/images/M/MV5BMzY4NDBkMWYtYzdkYy00YzBjLWJmODctMWM4YjYzZTdjNWE5XkEyXkFqcGc@._V1_.jpg",
+      primaryImage: "https://m.media-amazon.com/images/M/MV5BMzY4NDBkMWYtYzdkYy00YzBjLWJmODctMWM4YjYzZTdjNWE5XkEyXkFqcGc@._V1_.jpg",
       "trailer": "https://www.youtube.com/watch?v=c8aFcHFu8QM",
       "contentRating": "TV-G",
       "startYear": 2016,
@@ -140,7 +134,7 @@ const data =[
       "originalTitle": "Planet Earth",
       "type": "tvMiniSeries",
       "description": "A documentary series on the wildlife found on Earth. Each episode covers a different habitat: deserts, mountains, deep oceans, shallow seas, forests, caves, polar regions, fresh water, plains and jungles. Narrated by David Attenborough.",
-      "primaryImage": "https://m.media-amazon.com/images/M/MV5BY2NjNDUzOTgtMDFmNC00ZGQ4LWE5MDctMzczNGVlOGU1N2MyXkEyXkFqcGc@._V1_.jpg",
+      primaryImage: "https://m.media-amazon.com/images/M/MV5BY2NjNDUzOTgtMDFmNC00ZGQ4LWE5MDctMzczNGVlOGU1N2MyXkEyXkFqcGc@._V1_.jpg",
       "trailer": "https://www.youtube.com/watch?v=2yXS1MACnTA",
       "contentRating": "TV-PG",
       "startYear": 2006,
@@ -201,7 +195,7 @@ const data =[
       "originalTitle": "Band of Brothers",
       "type": "tvMiniSeries",
       "description": "The story of Easy Company of the U.S. Army 101st Airborne Division and their mission in World War II Europe, from Operation Overlord to V-J Day.",
-      "primaryImage": "https://m.media-amazon.com/images/M/MV5BMTQ3NTdmOTEtZTRmMi00NTg5LWI5NmUtYTNiOTc0ZmNkODU0XkEyXkFqcGc@._V1_.jpg",
+      primaryImage: "https://m.media-amazon.com/images/M/MV5BMTQ3NTdmOTEtZTRmMi00NTg5LWI5NmUtYTNiOTc0ZmNkODU0XkEyXkFqcGc@._V1_.jpg",
       "trailer": "https://www.youtube.com/watch?v=aH06LWZs-Ys",
       "contentRating": "TV-MA",
       "startYear": 2001,
@@ -269,7 +263,7 @@ const data =[
       "originalTitle": "Chernobyl",
       "type": "tvMiniSeries",
       "description": "In April 1986, the city of Chernobyl in the Soviet Union suffers one of the worst nuclear disasters in the history of mankind. Consequently, many heroes put their lives on the line in the following days, weeks and months.",
-      "primaryImage": "https://m.media-amazon.com/images/M/MV5BMmQ0Y2JiM2EtOWIwMy00MWVjLTgxZDctZTQzOWU3ODkzMWY4XkEyXkFqcGc@._V1_.jpg",
+      primaryImage: "https://m.media-amazon.com/images/M/MV5BMmQ0Y2JiM2EtOWIwMy00MWVjLTgxZDctZTQzOWU3ODkzMWY4XkEyXkFqcGc@._V1_.jpg",
       "trailer": "https://www.youtube.com/watch?v=s9APLXM9Ei8",
       "contentRating": "TV-MA",
       "startYear": 2019,
@@ -327,17 +321,209 @@ const data =[
       "averageRating": 9.3,
       "numVotes": 942685,
       "metascore": null
+    },
+    {
+      "id": "tt3566834",
+      "url": "https://www.imdb.com/title/tt3566834/",
+      "primaryTitle": "A Minecraft Movie",
+      "originalTitle": "A Minecraft Movie",
+      "type": "movie",
+      "description": "Four misfits are suddenly pulled through a mysterious portal into a bizarre cubic wonderland that thrives on imagination. To get back home they'll have to master this world while embarking on a quest with an unexpected expert crafter.",
+      primaryImage: "https://m.media-amazon.com/images/M/MV5BYzFjMzNjOTktNDBlNy00YWZhLWExYTctZDcxNDA4OWVhOTJjXkEyXkFqcGc@._V1_.jpg",
+      "trailer": "https://www.youtube.com/watch?v=wJO_vIDZn-I",
+      "contentRating": "PG",
+      "startYear": 2025,
+      "endYear": null,
+      "releaseDate": "2025-04-04",
+      "interests": [
+        "Action Epic",
+        "Adventure Epic",
+        "Fantasy Epic",
+        "High-Concept Comedy",
+        "Quest",
+        "Slapstick",
+        "Survival",
+        "Action",
+        "Adventure",
+        "Comedy"
+      ],
+      "countriesOfOrigin": [
+        "SE",
+        "US",
+        "NZ",
+        "CA"
+      ],
+      "externalLinks": [
+        "https://www.minecraft-movie.com/home/",
+        "https://www.youtube.com/watch?v=EaOnM8SewHc&ab"
+      ],
+      "spokenLanguages": [
+        "en"
+      ],
+      "filmingLocations": [
+        "Auckland, New Zealand"
+      ],
+      "productionCompanies": [
+        {
+          "id": "co0002663",
+          "name": "Warner Bros."
+        },
+        {
+          "id": "co0159111",
+          "name": "Legendary Entertainment"
+        },
+        {
+          "id": "co0084207",
+          "name": "Vertigo Entertainment"
+        }
+      ],
+      "budget": 150000000,
+      "grossWorldwide": 565138262,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy"
+      ],
+      "isAdult": false,
+      "runtimeMinutes": 101,
+      "averageRating": 6,
+      "numVotes": 58562,
+      "metascore": 46
+    },
+    {
+      "id": "tt6208148",
+      "url": "https://www.imdb.com/title/tt6208148/",
+      "primaryTitle": "Snow White",
+      "originalTitle": "Snow White",
+      "type": "movie",
+      "description": "A princess joins forces with seven dwarfs and a group of rebels to liberate her kingdom from her cruel stepmother the Evil Queen.",
+      primaryImage: "https://m.media-amazon.com/images/M/MV5BY2UwOGUxMzEtMzEyZi00NjEwLTkxOTMtYTljOWEzYjYyMWNjXkEyXkFqcGc@._V1_.jpg",
+      "trailer": "https://www.youtube.com/watch?v=iV46TJKL8cU",
+      "contentRating": "PG",
+      "startYear": 2025,
+      "endYear": null,
+      "releaseDate": "2025-03-21",
+      "interests": [
+        "Fairy Tale",
+        "Feel-Good Romance",
+        "Adventure",
+        "Family",
+        "Fantasy",
+        "Musical",
+        "Romance"
+      ],
+      "countriesOfOrigin": [
+        "US"
+      ],
+      "externalLinks": [
+        "https://www.facebook.com/DisneySnowWhite/",
+        "https://movies.disney.com/snow-white-2025"
+      ],
+      "spokenLanguages": [
+        "en",
+        "de"
+      ],
+      "filmingLocations": [
+        "Pinewood Studios, Iver Heath, Buckinghamshire, England, UK"
+      ],
+      "productionCompanies": [
+        {
+          "id": "co0008970",
+          "name": "Walt Disney Pictures"
+        },
+        {
+          "id": "co0093810",
+          "name": "Marc Platt Productions"
+        }
+      ],
+      "budget": 250000000,
+      "grossWorldwide": 183072266,
+      "genres": [
+        "Adventure",
+        "Family",
+        "Fantasy"
+      ],
+      "isAdult": false,
+      "runtimeMinutes": 109,
+      "averageRating": 1.6,
+      "numVotes": 337954,
+      "metascore": 50
+    }, 
+    {
+      "id": "tt0111161",
+      "url": "https://www.imdb.com/title/tt0111161/",
+      "primaryTitle": "The Shawshank Redemption",
+      "originalTitle": "The Shawshank Redemption",
+      "type": "movie",
+      "description": "A banker convicted of uxoricide forms a friendship over a quarter century with a hardened convict, while maintaining his innocence and trying to remain hopeful through simple compassion.",
+      primaryImage: "https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_.jpg",
+      "trailer": "https://www.youtube.com/watch?v=xyXX8LXiNJ4",
+      "contentRating": "R",
+      "startYear": 1994,
+      "endYear": null,
+      "releaseDate": "1994-10-14",
+      "interests": [
+        "Epic",
+        "Period Drama",
+        "Prison Drama",
+        "Drama"
+      ],
+      "countriesOfOrigin": [
+        "US"
+      ],
+      "externalLinks": [
+        "https://www.facebook.com/shawshankredemptionfilm/",
+        "https://www.warnerbros.com/movies/shawshank-redemption"
+      ],
+      "spokenLanguages": [
+        "en"
+      ],
+      "filmingLocations": [
+        "Mansfield Reformatory - 100 Reformatory Road, Mansfield, Ohio, USA"
+      ],
+      "productionCompanies": [
+        {
+          "id": "co0040620",
+          "name": "Castle Rock Entertainment"
+        }
+      ],
+      "budget": 25000000,
+      "grossWorldwide": 29332133,
+      "genres": [
+        "Drama"
+      ],
+      "isAdult": false,
+      "runtimeMinutes": 142,
+      "averageRating": 9.3,
+      "numVotes": 3033080,
+      "metascore": 82
     }
 ];
 
-function ObjectFind(data) {
-    const item = Object.entries(data).map(([key, img]) => ({
-      key,
-      primaryImage: img.primaryImage,  
-    }));
-    console.log("heloo wolrd")
+let index = 0;
+function updatedterminal() {
+  const imgEl = document.querySelector(".image-hro");
+  const circles = document.querySelectorAll(".circles");
+ 
+  setInterval(() => {
+    imgEl.innerHTML = `
+         <img src="${data[index].primaryImage}" alt="">
+    `
+    circles.forEach((circle, i) => {
+      if (i === index) {
+        circle.style.backgroundColor = '#00aaff';
+      } else {
+        circle.style.backgroundColor = '';
+      }
+    });
+    index = (index + 1) % data.length;
+  }, 2000);
 }
+updatedterminal();
 
-let indexbox = 0;
 
-console.log('heloo world')
+
+// Events that with documents
+toggleBtn.addEventListener('click', function(){
+  navbar.classList.toggle('active');
+});
