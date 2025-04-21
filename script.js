@@ -1,6 +1,7 @@
 // documents
 const toggleBtn = document.querySelector('.toggle-button');
 const navbar = document.querySelector('.navbar');
+const movieList = document.querySelector('.movie-grid');
 
 
 const data =[
@@ -500,6 +501,7 @@ const data =[
     }
 ];
 
+// face Section
 let index = 0;
 function updatedterminal() {
   const imgEl = document.querySelector(".image-hro");
@@ -517,9 +519,13 @@ function updatedterminal() {
       }
     });
     index = (index + 1) % data.length;
-  }, 2000);
+  }, 2500);
 }
 updatedterminal();
+// movie-list 
+function moviesList(){
+
+}
 
 
 
