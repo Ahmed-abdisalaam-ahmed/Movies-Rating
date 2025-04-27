@@ -192,6 +192,10 @@ main h1{
   transform: translateY(-5px);
   box-shadow: 0 10px 15px rgba(0, 170, 255, 0.2);
 }
+.svg-str svg{
+  color: #00aaff;
+
+}
 /* footer */
 .footer-area {
   background-color: #0a0a0a;
