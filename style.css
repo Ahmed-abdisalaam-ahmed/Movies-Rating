@@ -154,7 +154,7 @@ main {
 main h1{
   border-bottom: 3px solid #00aaff;
   display: inline-block;
-  margin-left: 37.7rem;
+  margin-left: 39rem;
   border-radius: 5px;
 }
 .movie-grid ,.TV-grid {
@@ -196,6 +196,41 @@ main h1{
   color: #00aaff;
 
 }
+/* website we use */
+.rating-hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.rating-hero .logo {
+  width: 100px;
+  margin-bottom: 1rem;
+  margin-block: 2rem;
+}
+
+.rating-hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.rating-hero p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.platform-logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.platform-logos img {
+  height: 90px;
+  object-fit: contain;
+}
+
 /* footer */
 .footer-area {
   background-color: #0a0a0a;
