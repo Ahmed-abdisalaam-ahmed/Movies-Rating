@@ -16,6 +16,7 @@ async function moviesLoadApi() {
     const response = await fetch(url, options);
     const result = await response.json();
     moviesList(result);
+    console.log(result)
   } catch (error) {
     console.error("the feych is has in Error", error);
   }
@@ -34,6 +35,7 @@ async function TvshowsApi() {
     const response = await fetch(url, options);
     const result = await response.json();
     TvshowsList(result);
+    console.log(result)
   } catch (error) {
     console.error(error);
   }
@@ -95,50 +97,64 @@ const movies = [
     metascore: null,
   },
   {
-    id: "tt5491994",
-    url: "https://www.imdb.com/title/tt5491994/",
-    primaryTitle: "Planet Earth II",
-    originalTitle: "Planet Earth II",
-    type: "tvMiniSeries",
-    description:
-      "David Attenborough returns with a new wildlife documentary that shows life in a variety of habitats.",
-    primaryImage:
-      "https://m.media-amazon.com/images/M/MV5BMzY4NDBkMWYtYzdkYy00YzBjLWJmODctMWM4YjYzZTdjNWE5XkEyXkFqcGc@._V1_.jpg",
-    trailer: "https://www.youtube.com/watch?v=c8aFcHFu8QM",
-    contentRating: "TV-G",
-    startYear: 2016,
-    endYear: 2016,
-    releaseDate: "2017-02-18",
-    interests: ["Docuseries", "Nature Documentary", "Documentary"],
-    countriesOfOrigin: ["GB", "DE", "FR", "CN", "US"],
-    externalLinks: [
-      "http://www.bbc.co.uk/programmes/p02544td",
-      "http://www.bbcearth.com/planetearth2",
+    "id": "tt0141842",
+    "url": "https://www.imdb.com/title/tt0141842/",
+    "primaryTitle": "The Sopranos",
+    "originalTitle": "The Sopranos",
+    "type": "tvSeries",
+    "description": "New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.",
+    primaryImage: "https://m.media-amazon.com/images/M/MV5BMjRmMTNiMTQtMDg1ZS00MGM1LWE1MGUtYjEzMGFjNWUzOWRkXkEyXkFqcGc@._V1_.jpg",
+    "trailer": "https://www.youtube.com/watch?v=Q8cBFvpqmH0",
+    "contentRating": "TV-MA",
+    "startYear": 1999,
+    "endYear": 2007,
+    "releaseDate": "1999-01-10",
+    "interests": [
+        "Epic",
+        "Gangster",
+        "Crime",
+        "Drama"
     ],
-    spokenLanguages: ["en", "fr"],
-    filmingLocations: null,
-    productionCompanies: [
-      {
-        id: "co0303279",
-        name: "BBC Natural History Unit (NHU)",
-      },
-      {
-        id: "co0118334",
-        name: "BBC America",
-      },
-      {
-        id: "co0078814",
-        name: "Zweites Deutsches Fernsehen (ZDF)",
-      },
+    "countriesOfOrigin": [
+        "US"
     ],
-    budget: null,
-    grossWorldwide: null,
-    genres: ["Documentary"],
-    isAdult: false,
-    runtimeMinutes: null,
-    averageRating: 9.4,
-    numVotes: 166009,
-    metascore: null,
+    "externalLinks": [
+        "https://www.facebook.com/TheSopranos",
+        "https://play.max.com/show/818c3d9d-1831-48a6-9583-0364a7f98453"
+    ],
+    "spokenLanguages": [
+        "en",
+        "it",
+        "ru"
+    ],
+    "filmingLocations": [
+        "Satin Dolls - 230 State Route 17 S., Lodi, New Jersey, USA"
+    ],
+    "productionCompanies": [
+        {
+            "id": "co0008693",
+            "name": "Home Box Office (HBO)"
+        },
+        {
+            "id": "co0046803",
+            "name": "Brad Grey Television"
+        },
+        {
+            "id": "co0214340",
+            "name": "Brillstein Entertainment Partners"
+        }
+    ],
+    "budget": null,
+    "grossWorldwide": null,
+    "genres": [
+        "Crime",
+        "Drama"
+    ],
+    "isAdult": false,
+    "runtimeMinutes": null,
+    "averageRating": 9.2,
+    "numVotes": 522396,
+    "metascore": null
   },
   {
     id: "tt0795176",
@@ -352,56 +368,66 @@ const movies = [
     metascore: 46,
   },
   {
-    id: "tt6208148",
-    url: "https://www.imdb.com/title/tt6208148/",
-    primaryTitle: "Snow White",
-    originalTitle: "Snow White",
-    type: "movie",
-    description:
-      "A princess joins forces with seven dwarfs and a group of rebels to liberate her kingdom from her cruel stepmother the Evil Queen.",
-    primaryImage:
-      "https://m.media-amazon.com/images/M/MV5BY2UwOGUxMzEtMzEyZi00NjEwLTkxOTMtYTljOWEzYjYyMWNjXkEyXkFqcGc@._V1_.jpg",
-    trailer: "https://www.youtube.com/watch?v=iV46TJKL8cU",
-    contentRating: "PG",
-    startYear: 2025,
-    endYear: null,
-    releaseDate: "2025-03-21",
-    interests: [
-      "Fairy Tale",
-      "Feel-Good Romance",
-      "Adventure",
-      "Family",
-      "Fantasy",
-      "Musical",
-      "Romance",
+    "id": "tt31193180",
+    "url": "https://www.imdb.com/title/tt31193180/",
+    "primaryTitle": "Sinners",
+    "originalTitle": "Sinners",
+    "type": "movie",
+    "description": "Trying to leave their troubled lives behind, twin brothers return to their hometown to start again, only to discover that an even greater evil is waiting to welcome them back.",
+    primaryImage: "https://m.media-amazon.com/images/M/MV5BNjIwZWY4ZDEtMmIxZS00NDA4LTg4ZGMtMzUwZTYyNzgxMzk5XkEyXkFqcGc@._V1_.jpg",
+    "trailer": "https://www.youtube.com/watch?v=bKGxHflevuk",
+    "contentRating": "R",
+    "startYear": 2025,
+    "endYear": null,
+    "releaseDate": "2025-04-18",
+    "interests": [
+        "Period Drama",
+        "Supernatural Horror",
+        "Vampire Horror",
+        "Action",
+        "Drama",
+        "Horror",
+        "Thriller"
     ],
-    countriesOfOrigin: ["US"],
-    externalLinks: [
-      "https://www.facebook.com/DisneySnowWhite/",
-      "https://movies.disney.com/snow-white-2025",
+    "countriesOfOrigin": [
+        "US"
     ],
-    spokenLanguages: ["en", "de"],
-    filmingLocations: [
-      "Pinewood Studios, Iver Heath, Buckinghamshire, England, UK",
+    "externalLinks": [
+        "https://amzn.to/4cNibD5",
+        "https://www.sinnersmovie.com/"
     ],
-    productionCompanies: [
-      {
-        id: "co0008970",
-        name: "Walt Disney Pictures",
-      },
-      {
-        id: "co0093810",
-        name: "Marc Platt Productions",
-      },
+    "spokenLanguages": [
+        "en"
     ],
-    budget: 250000000,
-    grossWorldwide: 183072266,
-    genres: ["Adventure", "Family", "Fantasy"],
-    isAdult: false,
-    runtimeMinutes: 109,
-    averageRating: 1.6,
-    numVotes: 337954,
-    metascore: 50,
+    "filmingLocations": [
+        "New Orleans, Louisiana, USA"
+    ],
+    "productionCompanies": [
+        {
+            "id": "co0002663",
+            "name": "Warner Bros."
+        },
+        {
+            "id": "co1090055",
+            "name": "Domain Entertainment (II)"
+        },
+        {
+            "id": "co0843639",
+            "name": "Proximity Media"
+        }
+    ],
+    "budget": 90000000,
+    "grossWorldwide": 63507468,
+    "genres": [
+        "Action",
+        "Drama",
+        "Horror"
+    ],
+    "isAdult": false,
+    "runtimeMinutes": 137,
+    "averageRating": 8.2,
+    "numVotes": 25803,
+    "metascore": 84
   },
   {
     id: "tt0111161",
@@ -479,14 +505,15 @@ function moviesList(data) {
               <img src="${datas.primaryImage}" alt="Movie Poster">
               <h3>${datas.originalTitle}</h3>
               <p>${datas.startYear} • ${datas.interests[0]}, ${datas.interests[1]}</p>
-              <a href="movie.html">View Details</a> <br>
-              <div class"svg-str" <i class="fa-solid fa-star" style="color: #FFD43B;"></i> ${datas.averageRating}</div>
+              <div class"svg-str" <i class="fa-solid fa-star" style="color: #FFD43B;  margin-bottom="2rem";"></i> ${datas.averageRating}</div><br>
+              <a href="movie.html">View Details</a> 
+
       `;
     movieList.appendChild(moviesitem);
   });
 }
 function TvshowsList(data) {
-  const tvfive = data.slice(10,15);
+  const tvfive = data.slice(15,20);
   const TvshowsListList = document.querySelector(".TV-grid");
   TvshowsListList.innerHTML = "";
 
@@ -497,9 +524,8 @@ function TvshowsList(data) {
               <img src="${datas.primaryImage}" alt="Movie Poster">
               <h3>${datas.originalTitle}</h3>
               <p>${datas.startYear} • ${datas.interests[0]}, ${datas.interests[1]}</p>
-              <a href="movie.html">View Details</a> <br>
-              <div class"svg-str" <i class="fa-solid fa-star" style="color: #FFD43B;"></i> ${datas.averageRating}</div>
-
+              <div class"svg-str" <i class="fa-solid fa-star" style="color: #FFD43B;"></i> ${datas.averageRating}</div><br>
+              <a href="movie.html">View Details</a> 
       `;
     TvshowsListList.appendChild(TVitem);
   });
