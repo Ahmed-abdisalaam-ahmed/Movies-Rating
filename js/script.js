@@ -505,9 +505,8 @@ function moviesList(data) {
               <img src="${datas.primaryImage}" alt="Movie Poster">
               <h3>${datas.originalTitle}</h3>
               <p>${datas.startYear} • ${datas.interests[0]}, ${datas.interests[1]}</p>
-              <div class"svg-str" <i class="fa-solid fa-star" style="color: #FFD43B;  margin-bottom="2rem";"></i> ${datas.averageRating}</div><br>
-              <a href="movie.html">View Details</a> 
-
+              <button class="btn-watchlist">WatchList</button> <br>
+              <button class="btn-Details"><a href="movie.html">View Details</a></button>  
       `;
     movieList.appendChild(moviesitem);
   });
@@ -524,8 +523,8 @@ function TvshowsList(data) {
               <img src="${datas.primaryImage}" alt="Movie Poster">
               <h3>${datas.originalTitle}</h3>
               <p>${datas.startYear} • ${datas.interests[0]}, ${datas.interests[1]}</p>
-              <div class"svg-str" <i class="fa-solid fa-star" style="color: #FFD43B;"></i> ${datas.averageRating}</div><br>
-              <a href="movie.html">View Details</a> 
+              <button class="btn-watchlist">WatchList</button> <br>
+              <button class="btn-Details"><a href="movie.html">View Details</a></button>  
       `;
     TvshowsListList.appendChild(TVitem);
   });
