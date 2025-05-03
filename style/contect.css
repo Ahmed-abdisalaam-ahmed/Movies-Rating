@@ -157,12 +157,14 @@ nav a {
   opacity: 75%;
   background: radial-gradient(92.16% 100% at 49.87% 0%, rgba(103, 168, 243, 0.3) 19.86%, rgba(0, 0, 0, 0) 100%);
   padding: 3rem;
-  height: 80vh;
+  height: 90vh;
   }
  main h1 {
     font-size: 32px;
     margin-bottom: 20px;
-    margin-left: 35.1rem;
+    margin-inline: 28.5rem;
+    color: #00aaff;
+    border-bottom: 2px solid white;
   }
   main p {
     line-height: 1.6;
@@ -256,4 +258,68 @@ nav a {
 
 .footer-social ul li a:hover {
   color: #00aaff;
+}
+/* Animation */
+@keyframes fadeInHero {
+  from { opacity: 0; transform: scale(1.03); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* mobile  */
+@media (max-width: 768px) {
+  .navbar {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height ease-in-out 0.5s, opacity 0.5s ease-in-out;
+  }
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links a {
+    padding: 10px;
+    line-height: 20px;
+  }
+  .navbar.active .navbar-links {
+    max-height: 300px;
+    opacity: 1;
+    transition: max-height ease-in-out 0.5s, opacity 0.5s ease-in-out;
+  }
+  .navbar.active .toggle-button .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar.active .toggle-button .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar.active .toggle-button .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  @media (min-width: 768px) {
+    .footer-widget {
+      width: 30%;
+      float: left;
+      padding: 0 15px;
+    }
+  
+    .footer-credit .col-left,
+    .footer-credit .col-right {
+      flex: 1 1 50%;
+      text-align: left;
+    }
+  
+    .footer-credit .col-right {
+      text-align: right;
+    }}
 }

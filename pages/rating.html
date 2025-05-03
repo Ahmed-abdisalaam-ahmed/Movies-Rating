@@ -3,40 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style/style.css">
     <link rel="shortcut icon"type="image/png"href="https://images.unsplash.com/photo-1742943892627-f7e4ddf91224?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>WatchListr : Rating movies & Tv show</title>
 </head>
 <body>
-    <header id="#HOME">
-        <nav class="navbar">
-          <div class="brand-title"><a href="#HOME">🎬 ReelRate</a></div>
-          <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </a>
-          <div class="navbar-links">
-            <ul>
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/assest/movies.html">Movies Details</a></li>
-              <li><a href="/assest/rating.html">Rating</a></li>
-              <li><a href="/assest/About.html">About</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+  <header id="#HOME">
+    <nav class="navbar">
+      <div class="brand-title"><a href="#HOME">🎬 ReelRate</a></div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <!-- <li><a href="/pages/movies.html" >Movies Details</a></li> -->
+          <li class="dropdown">
+            <a href="/pages/Details.html" class="dropbtn">Movies Details ▾</a>
+            <div class="dropdown-content">
+              <a href="/pages/Tv-shows.html" class="he-movTV">TV Shows</a>
+              <a href="/pages/Movies.html" class="he-movTV">Movies</a>
+              <a href="/pages/Po-Tv.html" class="he-movTV">Most Popular TV Shows</a>
+              <a href="/pages/Po-movies.html" class="he-movTV">Most Popular Movies</a>
+            </div>
+          </li>
+          <li><a href="/pages/rating.html">Rating</a></li>
+          <li><a href="/pages/About.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
     <footer id="footer" class="footer-area">
         <div class="container">
               <div class="footer-widget">
                 <h5>Quick Links</h5>
                 <ul>
-                    <li><a href="#HOME">Home</a></li>
-                    <li><a href="/assest/movies.html">Movies Details</a></li>
-                    <li><a href="/assest/rating.html">Rating</a></li>
-                    <li><a href="/assest/About.html">About</a></li>
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="/pages/Details.html">Movies Details</a></li>
+                  <li><a href="/pages/rating.html">Rating</a></li>
+                  <li><a href="/pages/About.html">About</a></li>
                 </ul>
               </div>
               <div class="footer-widget">
