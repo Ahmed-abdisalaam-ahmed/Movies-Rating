@@ -90,8 +90,6 @@ nav a:hover {
 .dropdown {
   position: relative;
 }
-
-/* Hide the dropdown by default */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -102,24 +100,19 @@ nav a:hover {
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
-
-/* Links inside dropdown */
 .dropdown-content a {
   color: white;
   padding: 10px 16px;
   text-decoration: none;
   display: block;
 }
-
-/* Hover over main link shows dropdown */
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-/* Optional: add hover effect to dropdown links */
 .dropdown-content a:hover {
   background-color: #333;
 }
+
 
 .toggle-button {
     position: absolute;
