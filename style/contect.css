@@ -159,11 +159,11 @@ nav a {
   padding: 3rem;
   height: 90vh;
   }
- main h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    margin-inline: 28.5rem;
+ main h2 {
+    font-size: 2rem;
     color: #00aaff;
+    display: inline-block;
+    margin: 2rem 20px 0rem 30rem;
     border-bottom: 2px solid white;
   }
   main p {
