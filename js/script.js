@@ -13,7 +13,7 @@ async function moviesLoadApi() {
     },
   };
   try {
-    const response = await fetch(url, options);
+    const response = await fetch('data/100mov.json');
     const result = await response.json();
     moviesList(result);
     console.log(result)
@@ -32,7 +32,7 @@ async function TvshowsApi() {
   };
 
   try {
-    const response = await fetch(url, options);
+    const response = await fetch('data/250tv.json');
     const result = await response.json();
     TvshowsList(result);
     console.log(result)
@@ -506,14 +506,17 @@ function moviesList(data) {
               <h3>${datas.originalTitle}</h3>
               <p>${datas.startYear} • ${datas.interests[0]}, ${datas.interests[1]}</p>
               <button class="btn-watchlist">WatchList</button> <br>
-              <button class="btn-Details"><a href="movie.html">View Details</a></button>  
+              <button class="btn-Details">Watch trailer</button>  
       `;
     movieList.appendChild(moviesitem);
+    const btnDetails = moviesitem.querySelector('.btn-Details')
+    btnDetails.addEventListener('click' , ()=> openModel(datas.trailer));
+    // console.log(datas.trailer)
   });
 }
 // TV-List
 function TvshowsList(data) {
-  const tvfive = data.slice(15,20);
+  const tvfive = data.slice(47,52);
   const TvshowsListList = document.querySelector(".TV-grid");
   TvshowsListList.innerHTML = "";
 
@@ -525,10 +528,45 @@ function TvshowsList(data) {
               <h3>${datas.originalTitle}</h3>
               <p>${datas.startYear} • ${datas.interests[0]}, ${datas.interests[1]}</p>
               <button class="btn-watchlist">WatchList</button> <br>
-              <button class="btn-Details"><a href="movie.html">View Details</a></button>  
+              <button class="btn-Details">Watch trailer</button>  
       `;
     TvshowsListList.appendChild(TVitem);
+    const btnDetail = TVitem.querySelector('.btn-Details');
+    btnDetail.addEventListener('click' , ()=> openModel(datas.trailer));
+    // console.log(datas.trailer)
   });
+};
+// model
+function openModel(trailer){
+  const model = document.querySelector('#tvmovie-modal');
+  const tvmoviePlayer = document.querySelector('#tvmovie-player');
+
+  const url = new URL(trailer);
+  const videoId = url.searchParams.get("v");
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+  if(videoId)
+
+  tvmoviePlayer.src = embedUrl;
+  model.style.display = 'block';
+
+  document.querySelector('#close-modal').addEventListener('click' , stopPlayer)
+}
+function stopPlayer(){
+  const model = document.querySelector('#tvmovie-modal');
+  const tvmoviePlayer = document.querySelector('#tvmovie-player');
+
+  tvmoviePlayer.src = "";
+  model.style.display = "none";
+
+}
+window.onclick = function(event){
+
+  const model = document.querySelector('#tvmovie-modal');
+
+  if (event.target == model){
+      stopPlayer();
+  }
 }
 
 // Events that with documents
@@ -539,3 +577,4 @@ document.addEventListener("DOMContentLoaded", () => {
   moviesLoadApi();
   TvshowsApi();
 });
+
