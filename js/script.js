@@ -505,8 +505,9 @@ function moviesList(data) {
               <img src="${datas.primaryImage}" alt="Movie Poster">
               <h3>${datas.originalTitle}</h3>
               <p>${datas.startYear} • ${datas.interests[0]}, ${datas.interests[1]}</p>
-              <button class="btn-watchlist">WatchList</button> <br>
               <button class="btn-Details">Watch trailer</button>  
+              <button class="btn-watchlist">WatchList</button> <br>
+
       `;
     movieList.appendChild(moviesitem);
     const btnDetails = moviesitem.querySelector('.btn-Details')
