@@ -1,7 +1,5 @@
 const toggleBtn = document.querySelector(".toggle-button");
 const navbar = document.querySelector(".navbar");
-const mediagird = document.querySelector(".movie-grid");
-
 
 async function moviesLoadApi(){
   try {

@@ -157,10 +157,6 @@ main h1{
   margin-left: 39rem;
   border-radius: 5px;
 }
-.movie-grid{
-  display: flex;
-  margin-block: 1rem;
-}
 .movie-card {
   background-color: #1e1e1e;
   padding: 15px;
