@@ -1,6 +1,7 @@
 const toggleBtn = document.querySelector(".toggle-button");
 const navbar = document.querySelector(".navbar");
 
+
 async function moviesLoadApi(){
   try {
     const response = await fetch('/data/100mov.json');
@@ -22,12 +23,12 @@ function moviesList(data) {
       moviesitem.innerHTML = `
         <div class="movie-info">
           <div class="item-info">
-            <img src="${datas.primaryImage}" alt="Movie Poster">
+            <img src="${datas.primaryImage}" alt="Movie Poster" id="movie-img">
             <div class="item-text">
-               <h2>${datas.primaryTitle}</h2><br>
-               <p>${datas.startYear} • ${datas.genres[0]}, ${datas.genres[2]} </p>
-               <p>${datas.type}</p>
-               <h4>${datas.releaseDate}</h4>
+               <h2 id="movie-title">${datas.primaryTitle}</h2><br>
+               <p id="movieStaryear">${datas.startYear} • ${datas.genres[0]}, ${datas.genres[2]} </p>
+               <p id="movieType">${datas.type}</p>
+               <h4 id="movieRelease">${datas.releaseDate}</h4>
             </div>
           </div>
           <div class="btn-details">
@@ -36,7 +37,7 @@ function moviesList(data) {
           </div>
         </div>
         <div class="card-discription">
-          <p>${datas.description}</p>
+          <p id="movie-description">${datas.description}</p>
         </div>  
         `;
       movieList.appendChild(moviesitem);
@@ -72,36 +73,56 @@ window.onclick = function(event){
       stopPlayer();
   }
 }
-// localStorage
-function Addingpost(event , data){
-  event.preventDefault();
-  // console.log("help memmmm");
+// // localStorage
+// function Addingpost(event){
+//   event.preventDefault();
+//   // console.log("help memmmm");
 
-      const get = {
-          id :data.id,
-          Title: Title.value,
-          Image:Urlimg.value,
-          description:aboutBlog.value,
-      }
-      ShowPostToDom(get);
-      SaveToLocalstorage(get);
+//     const Title = moviesList.getElementById('movie-title');
+//     const imgMovie = moviesList.getElementById('movie-img');
+//     const movieStaryear = moviesList.getElementById('movieStaryear');
+//     const movieType = moviesList.getElementById('movieType');
+//     const moviedescription  = moviesList.getElementById('movie-description');
+//     const movieRelease  = moviesList.getElementById('movieRelease');
 
 
-  postTitle.value = '';     
-  Urlimg.value = '';     
-  aboutBlog.value = ''; 
+//       const get = {
+//           id :data.id,
+//           Title: Title.value,
+//           Image:imgMovie.value,
+//           startYear:movieStaryear.value,
+//           releaseDate:movieRelease.value,
+//           movieType:movieType.value,
+//           description:moviedescription.value,
+//       }
+//       SavePostToLocalstorage(get);
+
+
+//   Title.value = '';     
+//   imgMovie.value = '';     
+//   movieStaryear.value = ''; 
+//   moviedescription.value = '';     
+//   movieRelease.value = '';     
+//   movieType.value = ''; 
   
-}
-function SavePostToLocalstorage(){
+// }
+// function SavePostToLocalstorage(tasks){
+//   const tasks = GetPostThelocalStorage();
+//   tasks.push(post)
+//   localStorage.setItem("media" , JSON.stringify(media));
+// }
+// function loadPosttheLocalStorage(){
 
-}
-function loadPosttheLocalStorage(){
-
-}
-function GetPostThelocalStorage(){
-
-}
-  // Event documents 
+// }
+// function GetPostThelocalStorage(){
+//   const tasks = JSON.parse(localStorage.getItem("media")) || [];
+//   return tasks;
+// }
+// Event documents 
+  toggleBtn.addEventListener("click", function () {
+    navbar.classList.toggle("active");
+  });
 document.addEventListener("DOMContentLoaded",()=>{
     moviesLoadApi();
+    // Addingpost();
   })

@@ -14,11 +14,13 @@ async function TvshowApi(){
 function TvshowsLists(data) {
     const TvshowsList = document.querySelector(".linerate");
     TvshowsList.innerHTML = "";
+  
     const TvDta = data;
     
     TvDta.forEach((datas) => {
       const tvShowsitem = document.createElement("div");
       tvShowsitem.className = "tvShows-card";
+      tvShowsitem.dataset.id = data.id;
       tvShowsitem.innerHTML = `
         <div class="tvshows-info">
           <div class="item-info">
@@ -73,35 +75,38 @@ window.onclick = function(event){
   }
 }
 // localStorage
-// function Addingpost(event , data){
-//   event.preventDefault();
-//   // console.log("help memmmm");
+function Addingpost(data){
+  event.preventDefault();
+  // console.log("help memmmm");
 
-//       const get = {
-//           id :data.id,
-//           Title: Title.value,
-//           Image:Urlimg.value,
-//           description:aboutBlog.value,
-//       }
-//       ShowPostToDom(get);
-//       SaveToLocalstorage(get);
+      const get = {
+          id :data.id,
+          Title: Title.value,
+          Image:Urlimg.value,
+          description:aboutBlog.value,
+      }
+      ShowPostToDom(get);
+      SaveToLocalstorage(get);
 
 
-//   postTitle.value = '';     
-//   Urlimg.value = '';     
-//   aboutBlog.value = ''; 
+  postTitle.value = '';     
+  Urlimg.value = '';     
+  aboutBlog.value = ''; 
   
-// }
-// function SavePostToLocalstorage(){
+}
+function SavePostToLocalstorage(){
 
-// }
-// function loadPosttheLocalStorage(){
+}
+function loadPosttheLocalStorage(){
 
-// }
-// function GetPostThelocalStorage(){
+}
+function GetPostThelocalStorage(){
 
-// }
-
+}
+// Events documents 
+toggleBtn.addEventListener("click", function () {
+  navbar.classList.toggle("active");
+});
 document.addEventListener("DOMContentLoaded",()=>{
   TvshowApi();
 })

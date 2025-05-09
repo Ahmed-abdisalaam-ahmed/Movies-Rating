@@ -17,9 +17,14 @@ img{
     width: 100%;
 }
 .container{
-  max-width: 1200px;
+  /* max-width: 1200px;
   margin: 0 auto;
-  padding-inline: 1rem;
+  padding-inline: 1rem; */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  /* max-width: 00px; */
+  margin: auto;
 }
 header{
   background-color: #1c1c1c;
@@ -163,7 +168,7 @@ nav a {
     font-size: 2rem;
     color: #00aaff;
     display: inline-block;
-    margin: 2rem 20px 0rem 30rem;
+    margin: 2rem 20px 0rem 0rem;
     border-bottom: 2px solid white;
   }
   main p {
