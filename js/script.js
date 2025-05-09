@@ -13,10 +13,9 @@ async function moviesLoadApi() {
     },
   };
   try {
-    const response = await fetch(url, options);
+    const response = await fetch('data/100mov.json');
     const result = await response.json();
     moviesList(result);
-    console.log(result)
   } catch (error) {
     console.error("the feych is has in Error", error);
   }
@@ -32,14 +31,14 @@ async function TvshowsApi() {
   };
 
   try {
-    const response = await fetch(url, options);
+    const response = await fetch('data/250tv.json');
     const result = await response.json();
     TvshowsList(result);
-    console.log(result)
   } catch (error) {
     console.error(error);
   }
 }
+
 const movies = [
   {
     id: "tt0903747",
@@ -492,9 +491,10 @@ function updatedterminal() {
   }, 2500);
 }
 updatedterminal();
+
 // movie-list
 function moviesList(data) {
-  const moviefive = data.slice(0,5);
+  const moviefive = data.slice(0,6);
   const movieList = document.getElementById("movieList");
   movieList.innerHTML = "";
 
@@ -502,18 +502,29 @@ function moviesList(data) {
     const moviesitem = document.createElement("div");
     moviesitem.className = "movie-card";
     moviesitem.innerHTML = `
-              <img src="${datas.primaryImage}" alt="Movie Poster">
-              <h3>${datas.originalTitle}</h3>
-              <p>${datas.startYear} • ${datas.interests[0]}, ${datas.interests[1]}</p>
+              <img src="${datas.primaryImage}" alt="Movie Poster" class="img-movie">
+              <h3 class="Title-movie">${datas.originalTitle}</h3>
+              <p class="staryear">${datas.startYear} • ${datas.interests[0]}, ${datas.interests[1]}</p>
+              <button class="btn-Details">Watch trailer</button>  
               <button class="btn-watchlist">WatchList</button> <br>
-              <button class="btn-Details"><a href="movie.html">View Details</a></button>  
+
       `;
     movieList.appendChild(moviesitem);
+    const btnDetails = moviesitem.querySelector('.btn-Details');
+    const watchlist = moviesitem.querySelector('.btn-watchlist');
+    btnDetails.addEventListener('click' , ()=> openModel(datas.trailer));
+
+    // console.log(datas.trailer)22
+    watchlist.addEventListener("click",()=> {
+      showupInLocalStorage(datas,datas.primaryTitle,datas.primaryImage,datas.startYear,
+        datas.endYear,datas.type,datas.genres,datas.averageRating,datas.numVotes,datas.runtimeMinutes,datas.metascore);
+    });
   });
 }
+
 // TV-List
 function TvshowsList(data) {
-  const tvfive = data.slice(15,20);
+  const tvfive = data.slice(47,53);
   const TvshowsListList = document.querySelector(".TV-grid");
   TvshowsListList.innerHTML = "";
 
@@ -525,17 +536,111 @@ function TvshowsList(data) {
               <h3>${datas.originalTitle}</h3>
               <p>${datas.startYear} • ${datas.interests[0]}, ${datas.interests[1]}</p>
               <button class="btn-watchlist">WatchList</button> <br>
-              <button class="btn-Details"><a href="movie.html">View Details</a></button>  
+              <button class="btn-Details">Watch trailer</button>  
       `;
     TvshowsListList.appendChild(TVitem);
+    const btnDetail = TVitem.querySelector('.btn-Details');
+    btnDetail.addEventListener('click' , ()=> openModel(datas.trailer));
+    // console.log(datas.trailer)
+    const btnwatchlist = TVitem.querySelector('.btn-watchlist');
+
+    btnwatchlist.addEventListener("click",()=> showupInLocalStorage(datas,datas.primaryTitle,datas.primaryImage,datas.startYear,
+      datas.endYear,datas.type,datas.genres,datas.averageRating,datas.numVotes,datas.runtimeMinutes,datas.metascore
+    ));
   });
+};
+
+// model
+function openModel(trailer){
+  const model = document.querySelector('#tvmovie-modal');
+  const tvmoviePlayer = document.querySelector('#tvmovie-player');
+
+  const url = new URL(trailer);
+  const videoId = url.searchParams.get("v");
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+  if(videoId)
+
+  tvmoviePlayer.src = embedUrl;
+  model.style.display = 'block';
+
+  document.querySelector('#close-modal').addEventListener('click' , stopPlayer);
 }
 
+function stopPlayer(){
+  const model = document.querySelector('#tvmovie-modal');
+  const tvmoviePlayer = document.querySelector('#tvmovie-player');
+
+  tvmoviePlayer.src = "";
+  model.style.display = "none";
+
+}
+
+window.onclick = function(event){
+
+  const model = document.querySelector('#tvmovie-modal');
+
+  if (event.target == model){
+      stopPlayer();
+  }
+}
+
+// LocalStorage
+function showupInLocalStorage(datas,primaryTitle,primaryImage,startYear,endYear,type,genres,averageRating,numVotes,runtimeMinutes,metascore){
+
+  const post = {
+    id: datas.id,
+    Title:primaryTitle,
+    Image:primaryImage,
+    startYear:startYear,
+    endYear:endYear,
+    type:type,
+    genres:genres,
+    averageRating:averageRating,
+    numVotes:numVotes,
+    runtimeMinutes:runtimeMinutes,
+    metascore:metascore,
+    completed:"false"
+  }
+  const posts = GetPostThelocalStorage();
+
+  const alreadyExists = posts.some(p => p.id === post.id);
+
+  if (!alreadyExists) {
+    SavePostToLocalstorage(post);
+    
+  }
+
+}
+function SavePostToLocalstorage(gets){
+  const posts = GetPostThelocalStorage();
+  posts.push(gets)
+  localStorage.setItem("posts" , JSON.stringify(posts));
+}
+
+function GetPostThelocalStorage(){
+  const tasks = JSON.parse(localStorage.getItem("posts")) || [];
+  return tasks;
+}
+function LoadPostFromLocalStorage(){
+  // gettting the loacl data
+  const posts = GetPostThelocalStorage();
+  posts.forEach(post =>{
+    indexlist(post)
+  })
+}
+function indexlist(post){
+    const span = document.querySelector('.index-watclist');
+    span.textContent = post[length];
+}
 // Events that with documents
 toggleBtn.addEventListener("click", function () {
   navbar.classList.toggle("active");
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   moviesLoadApi();
   TvshowsApi();
+  LoadPostFromLocalStorage();
 });
+

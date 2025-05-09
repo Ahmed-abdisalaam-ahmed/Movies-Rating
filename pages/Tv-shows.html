@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- headers -->
-    <header id="#HOME">
+  <header id="#HOME">
         <nav class="navbar">
           <div class="brand-title"><a href="#HOME">🎬 ReelRate</a></div>
           <a href="#" class="toggle-button">
@@ -27,22 +27,35 @@
                 <a href="/pages/Details.html" class="dropbtn">Movies Details ▾</a>
                 <div class="dropdown-content">
                   <a href="/pages/Tv-shows.html" class="he-movTV">TV Shows</a>
-                  <a href="/pages/Movies.html" class="he-movTV">Movies</a>
                   <a href="/pages/Po-Tv.html" class="he-movTV">Most Popular TV Shows</a>
                   <a href="/pages/Po-movies.html" class="he-movTV">Most Popular Movies</a>
                 </div>
               </li>
               <li><a href="/pages/rating.html">Rating</a></li>
               <li><a href="/pages/About.html">About</a></li>
+              <li><a href="/pages/watchlist.html"><i class="fa-solid fa-bookmark"></i> WatchList</a></li>
             </ul>
           </div>
         </nav>
-    </header>
+  </header>
 
-    
+  <!-- Movies -->
+  <section id="tv-shows" class="media-rating">
+    <h2>TV-Shows</h2>
+    <div class="linerate">
+    </div>
+  </section>
+
+<!-- model trailer -->
+  <div id="tvShows-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal">&times;</span>
+    <iframe id="TvShows-player" frameborder="0" allowfullscreen></iframe>
+  </div>
+  </div>
 
     <!-- footers -->
-    <footer id="footer" class="footer-area">
+  <footer id="footer" class="footer-area">
         <div class="container">
               <div class="footer-widget">
                 <h5>Quick Links</h5>
@@ -56,11 +69,11 @@
               <div class="footer-widget">
                 <ul>
                   <h5>Movies</h5>
-                  <li><a href="javascript:void(0)">Top 150 Movies</a></li>
-                  <li><a href="javascript:void(0)">Most Popular Movies</a></li>
+                  <li><a href="/pages/Details.html">Top 150 Movies</a></li>
+                  <li><a href="/pages/Po-movies.html">Most Popular Movies</a></li>
                   <h5>Tv Shows</h5>
-                  <li><a href="javascript:void(0)">Top 150 Tv Shows</a></li>
-                  <li><a href="javascript:void(0)">Most popular Tv Shows</a></li>
+                  <li><a href="/pages/Tv-shows.html">Top 150 Tv Shows</a></li>
+                  <li><a href="/pages/Po-Tv.html">Most popular Tv Shows</a></li>
                 </ul>
               </div>
               <div class="footer-widget">
@@ -89,6 +102,7 @@
               </div>
               </div>
         </div>
-    </footer>
+  </footer>
+    <script src="/js/tvShows.js"></script>
 </body>
 </html>

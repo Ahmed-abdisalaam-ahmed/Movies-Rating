@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="/style/watchlist.css" />
     <link rel="shortcut icon"type="image/png"href="https://images.unsplash.com/photo-1742943892627-f7e4ddf91224?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,86 +24,37 @@
             <li><a href="/index.html">Home</a></li>
             <!-- <li><a href="/pages/movies.html" >Movies Details</a></li> -->
             <li class="dropdown">
-              <a href="#" class="dropbtn">Movies Details ▾</a>
+              <a href="/pages/Details.html" class="dropbtn">Movies Details ▾</a>
               <div class="dropdown-content">
-                <a href="/pages/Details.html" class="he-movTV">Movies</a>
                 <a href="/pages/Tv-shows.html" class="he-movTV">TV Shows</a>
                 <a href="/pages/Po-Tv.html" class="he-movTV">Most Popular TV Shows</a>
                 <a href="/pages/Po-movies.html" class="he-movTV">Most Popular Movies</a>
               </div>
             </li>
-            <div id="search-container">
-              <input type="text" id="search-input" placeholder="Search for a movie or TV show..." />
-              <button onclick="searchMovie()">Search</button>
-            </div>
-            <div id="search-results"></div>
+            <li><a href="/pages/rating.html">Rating</a></li>
             <li><a href="/pages/About.html">About</a></li>
-            <li><a href="/pages/watchlist.html"><i class="fa-solid fa-bookmark"></i> WatchList
-              <span class="index-watclist" style="color: aliceblue;"></span>
-            </a>
-            </li>
+            <li><a href="/pages/watchlist.html"><i class="fa-solid fa-bookmark"></i> WatchList</a></li>
           </ul>
         </div>
       </nav>
     </header>
-<!-- Hero section -->
-    <section id="hero">
-      <div class="image-hro">
-      </div>
-      <div class="cir-one">
-        <span class="circles"></span>
-        <span class="circles"></span>
-        <span class="circles"></span>
-        <span class="circles"></span>
-        <span class="circles"></span>
-        <span class="circles"></span>
-        <span class="circles"></span>
-        <span class="circles"></span>
-      </div>
-    </section>
-<!-- main part -->
     <main id="main">
-      <h1 class="mov-lis">Movies</h1>    
-      <section class="container movie-grid" id="movieList">
-            <!-- <div class="movie-card">
-              <img src="https://m.media-amazon.com/images/M/MV5BYjgxMDI5NmMtNTU3OS00ZDQxLTgxZmEtNzY1ZTBmMDY4NDRkXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster">
-              <h3>Sample Movie</h3>
-              <p>2025 • Action, Drama</p>
-              <a href="movie.html">View Details</a>
-            </div> -->
-      </section>
-      <h1 class="mov-lis">TV Shows</h1>
-      <section class="container TV-grid " id="TV-shows">
-        <!-- <div class="movie-card">
-          <img src="https://m.media-amazon.com/images/M/MV5BYjgxMDI5NmMtNTU3OS00ZDQxLTgxZmEtNzY1ZTBmMDY4NDRkXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster">
-          <h3>Sample Movie</h3>
-          <p>2025 • Action, Drama</p>
-          <a href="movie.html">View Details</a>
+      <div id="watchlist" class="container ">
+        <!-- <div class="item">
+          <img src="shawshank.jpg" alt="The Shawshank Redemption">
+          <div class="details">
+            <h2>2. The Shawshank Redemption</h2>
+            <p class="meta">1994 · 2h 22m · 15</p>
+            <p class="rating">⭐ 9.3 (3M) <span class="metascore">82</span> Metascore</p>
+            <div class="actions">
+              <a href="#">☆ Rate</a>
+              <a href="#">👁️ Mark as watched</a>
+            </div>
+          </div>
         </div> -->
-      </section>  
-    </main>
-    <!-- modal -->
-    <div id="tvmovie-modal" class="modal">
-      <div class="modal-content">
-        <span id="close-modal">&times;</span>
-        <iframe id="tvmovie-player" frameborder="0" allowfullscreen></iframe>
       </div>
-    </div>
-<!-- landing sadi -->
-<section class="rating-hero">
-  <h1>Find the Best Movies to Rate</h1>
-  <p>Discover, review, and rate movies across top platforms.</p>
+    </main>
 
-  <div class="platform-logos">
-    <a href="javascript:void(0)"><img src="https://m.media-amazon.com/images/G/01/IMDb/brand/guidelines/imdb/IMDb_Android_App_Icon._CB443386390_.png" alt="IMDb"></a>
-    <a href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Rotten_Tomatoes_alternative_logo.svg" alt="Rotten Tomatoes"></a>
-    <a href="javascript:void(0)"><img src="https://a.ltrbxd.com/logos/letterboxd-logo-alt-v-neg-rgb-1000px.png" alt="Letterboxd"></a>
-    <a href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Metacritic_logo.svg" alt="Metacritic"></a>
-    <a href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Logo_of_Flixster.svg" alt="Flixster"></a>
-  </div>
-</section>
-
-<!-- Footer part -->
     <footer id="footer" class="footer-area">
       <div class="container">
             <div class="footer-widget">
@@ -152,7 +103,7 @@
             </div>
       </div>
     </footer>
+    <script src="/js/watchlist.js"></script>
 
-    <script src="/js/script.js"></script>
-  </body>
+    </body>
 </html>

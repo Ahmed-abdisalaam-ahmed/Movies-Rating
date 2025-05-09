@@ -25,39 +25,39 @@
       <div class="navbar-links">
         <ul>
           <li><a href="/index.html">Home</a></li>
-          <li><a href="/pages/Details.html">Movies Details</a></li>
+          <!-- <li><a href="/pages/Details.html">Movies Details</a></li> -->
+          <li class="dropdown">
+            <a href="/pages/Details.html" class="dropbtn">Movies Details ▾</a>
+            <div class="dropdown-content">
+              <a href="/pages/Tv-shows.html" class="he-movTV">TV Shows</a>
+              <a href="/pages/Po-Tv.html" class="he-movTV">Most Popular TV Shows</a>
+              <a href="/pages/Po-movies.html" class="he-movTV">Most Popular Movies</a>
+            </div>
+          </li>
           <li><a href="/pages/rating.html">Rating</a></li>
           <li><a href="/pages/About.html">About</a></li>
+          <li><a href="/pages/watchlist.html"><i class="fa-solid fa-bookmark"></i> WatchList</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <!-- Tv shows -->
-  <section id="TV-shows" class="media-rating">
-    <div class="linerate">
-      <h2>TV-shows</h2>
-        <!-- <div class="movie-card">
-        <img src="https://m.media-amazon.com/images/M/MV5BYjgxMDI5NmMtNTU3OS00ZDQxLTgxZmEtNzY1ZTBmMDY4NDRkXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster">
-        <h3>Sample Movie</h3>
-        <p>2025 • Action, Drama</p>
-        <a href="movie.html">View Details</a>
-      </div> -->
-    </div>
-  </section>
-
   <!-- Movies -->
   <section id="Movies" class="media-rating">
+    <h2>Movies</h2>
     <div class="linerate">
-      <h2>Movies</h2>
-        <!-- <div class="movie-card">
-            <img src="https://m.media-amazon.com/images/M/MV5BYjgxMDI5NmMtNTU3OS00ZDQxLTgxZmEtNzY1ZTBmMDY4NDRkXkEyXkFqcGc@._V1_.jpg" alt="Movie Poster">
-            <h3>Sample Movie</h3>
-            <p>2025 • Action, Drama</p>
-            <a href="movie.html">View Details</a>
-        </div> -->
-    </div>  
-  </section>
+    </div>
+</section>
+
+<!-- model trailer -->
+
+    <div id="movie-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <iframe id="movie-player" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    
 
   <!--footer  -->
   <footer id="footer" class="footer-area">
@@ -73,12 +73,14 @@
       </div>
       <div class="footer-widget">
         <ul>
-          <h5>Movies</h5>
-          <li><a href="javascript:void(0)">Top 150 Movies</a></li>
-          <li><a href="javascript:void(0)">Most Popular Movies</a></li>
-          <h5>Tv Shows</h5>
-          <li><a href="javascript:void(0)">Top 150 Tv Shows</a></li>
-          <li><a href="javascript:void(0)">Most popular Tv Shows</a></li>
+          <ul>
+            <h5>Movies</h5>
+            <li><a href="/pages/Details.html">Top 150 Movies</a></li>
+            <li><a href="/pages/Po-movies.html">Most Popular Movies</a></li>
+            <h5>Tv Shows</h5>
+            <li><a href="/pages/Tv-shows.html">Top 150 Tv Shows</a></li>
+            <li><a href="/pages/Po-Tv.html">Most popular Tv Shows</a></li>
+          </ul>
         </ul>
       </div>
       <div class="footer-widget">
@@ -115,7 +117,6 @@
       </div>
     </div>
   </footer>
-
+ <script src="/js/media.js"></script>
 </body>
-
 </html>
