@@ -542,9 +542,4 @@ main h1{
         text-align: right;
     }
  }
- @media (max-width: 480px) {
-  .image-hro {
-    aspect-ratio: 4 / 3;
-  }
-}
 
