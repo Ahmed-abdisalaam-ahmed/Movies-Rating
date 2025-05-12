@@ -24,16 +24,25 @@
               <li><a href="/index.html">Home</a></li>
               <!-- <li><a href="/pages/movies.html" >Movies Details</a></li> -->
               <li class="dropdown">
-                <a href="/pages/Details.html" class="dropbtn">Movies Details ▾</a>
+                <a href="#" class="dropbtn">Movies Details ▾</a>
                 <div class="dropdown-content">
+                  <a href="/pages/Details.html" class="he-movTV">Movies</a>
                   <a href="/pages/Tv-shows.html" class="he-movTV">TV Shows</a>
                   <a href="/pages/Po-Tv.html" class="he-movTV">Most Popular TV Shows</a>
                   <a href="/pages/Po-movies.html" class="he-movTV">Most Popular Movies</a>
                 </div>
               </li>
-              <li><a href="/pages/rating.html">Rating</a></li>
+              <li>
+                <div id="search">
+                  <input type="text" id="search-input" placeholder="Search for a movie or TV show..." />
+                  <button class="btn-Search"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="search-results"></div>
+              </li>
               <li><a href="/pages/About.html">About</a></li>
-              <li><a href="/pages/watchlist.html"><i class="fa-solid fa-bookmark"></i> WatchList</a></li>
+              <li><a href="/pages/watchlist.html"><i class="fa-solid fa-bookmark"></i> WatchList
+                <span class="index-watclist" style="color: aliceblue;"></span></a>
+              </li>
             </ul>
           </div>
         </nav>
