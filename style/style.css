@@ -521,24 +521,24 @@ main h1{
     font-size: 1.5rem;
     margin: 1.5rem auto;
   }
-  /* footer */
-  .footer-widget {
-      width: 100%;
-      float: left;
-      padding: 0 15px;
-    }
-    /* .footer-credit {
-      
-    } */
-    .footer-credit .col-left,
-    .footer-credit .col-right {
-      flex: 1 1 50%;
-      text-align: left;
-    }
-  
-    .footer-credit .col-right {
-      text-align: center;
-    }
 
   }
+    /* footer */
+    @media (min-width: 768px) {
+      .footer-widget {
+        width: 30%;
+        float: left;
+        padding: 0 15px;
+      }
+    
+      .footer-credit .col-left,
+      .footer-credit .col-right {
+        flex: 1 1 50%;
+        text-align: left;
+      }
+    
+      .footer-credit .col-right {
+        text-align: right;
+    }
+ }
 
