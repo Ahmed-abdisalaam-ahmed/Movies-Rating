@@ -12,6 +12,7 @@ html {
 body {
     background: #f9f9f9;
     color: #1c1c1c;
+    padding-top: 60px;
   
 }
 img{
@@ -25,8 +26,11 @@ img{
 header{
   background-color: #1c1c1c;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  position: relative;
+  position: fixed;
+  margin-bottom: 10px;
   z-index: 1000;
+  width: 100%;
+    top: 0%;
 
 }
 header h1 {
@@ -96,6 +100,43 @@ nav a:hover {
   line-height: 60px;
   color: white;
 }
+/* search */
+#search {
+  display: flex;
+  flex-direction: row-reverse;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 12px;
+  margin-top: 5px;
+  padding: 10px 15px;
+  /* border: none; */
+}
+#search input{
+  background-color: #1e1e1e;
+  border: none;
+  color: white;
+  cursor: text;
+}
+#search input:focus{
+  outline: none;
+}
+#search input:hover{
+  color: white;
+}
+#search .btn-Search{
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  /* border-right: 1px solid rgb(255, 255, 255); */
+  cursor: pointer;
+  
+}
+#search .btn-Search i{
+  color: white;
+}
+#search .btn-Search i:hover{
+  color: #00aaff;
+}
+
 /* Dropdown  */
 .dropdown {
   position: relative;
