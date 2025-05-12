@@ -32,18 +32,40 @@ function GetloadtheLocalStorage(){
       const Deleted = Watch.querySelector('.DElete');
       Deleted.addEventListener("click", ()=>{
         // console.log("heloo worls",Watch);
-        Deletehandle(item.id , Watch);
+        Deletehandle(item.id , Watch ,item.Title);
       })
-
-      
     });
+
 };
-function Deletehandle(id , item){
+function Deletehandle(id , item ,primaryTitle){
   let posts = GetPostThelocalStorage();
   posts = posts.filter(post => post.id != id);
-  console.log(posts)
   localStorage.setItem("posts" , JSON.stringify(posts));
+  messageDeleted(primaryTitle);
   item.remove();
+  indexlist();
+}
+function messageDeleted(title){
+  const messageBox = document.querySelector(".message-box"); // Add this div in your HTML
+
+  messageBox.textContent = `${title} Deleted to Watchlist!`;
+  messageBox.style.display = "block";
+  messageBox.style.backgroundColor = "red"; // Or use a class for styling
+
+
+// Auto-hide after 3 seconds
+setTimeout(() => {
+  messageBox.style.display = "none";
+}, 3000);
+
+}
+function indexlist() {
+  const tasks = JSON.parse(localStorage.getItem("posts")) || []; // replace "yourKey" with the actual key
+  const length = tasks.length;
+  // console.log(length);
+  const span = document.querySelector(".index-watclist");
+  span.textContent = length;
+  return true
 }
 
 
@@ -51,6 +73,6 @@ toggleBtn.addEventListener("click", function () {
     navbar.classList.toggle("active");
   });
 document.addEventListener("DOMContentLoaded",()=>{
-  // forWatchlist();
   GetloadtheLocalStorage();
+  indexlist();
 })

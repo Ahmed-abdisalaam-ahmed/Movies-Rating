@@ -41,9 +41,26 @@ function TvshowsLists(data) {
           <p>${datas.description}</p>
         </div>  
         `;
-        TvshowsList.appendChild(tvShowsitem);
-      const btntrailer = tvShowsitem.querySelector('.btn-trailer')
+      TvshowsList.appendChild(tvShowsitem);
+      const btntrailer = tvShowsitem.querySelector('.btn-trailer');
+      const btnwatchlist = tvShowsitem.querySelector(".btn-watchlist");
       btntrailer.addEventListener('click' , ()=> trailerModel(datas.trailer));
+
+      btnwatchlist.addEventListener("click", () =>
+      showupInLocalStorage(
+        datas,
+        datas.primaryTitle,
+        datas.primaryImage,
+        datas.startYear,
+        datas.endYear,
+        datas.type,
+        datas.genres,
+        datas.averageRating,
+        datas.numVotes,
+        datas.runtimeMinutes,
+        datas.metascore
+      )
+      );
     });
   };
 // model
@@ -74,34 +91,67 @@ window.onclick = function(event){
       stopPlayer();
   }
 }
-// localStorage
-function Addingpost(data){
-  event.preventDefault();
-  // console.log("help memmmm");
+// LocalStorage
+function showupInLocalStorage(
+  datas,
+  primaryTitle,
+  primaryImage,
+  startYear,
+  endYear,
+  type,
+  genres,
+  averageRating,
+  numVotes,
+  runtimeMinutes,
+  metascore
+) {
+  const post = {
+    id: datas.id,
+    Title: primaryTitle,
+    Image: primaryImage,
+    startYear: startYear,
+    endYear: endYear,
+    type: type,
+    genres: genres,
+    averageRating: averageRating,
+    numVotes: numVotes,
+    runtimeMinutes: runtimeMinutes,
+    metascore: metascore,
+    completed: "false",
+  };
+  const posts = GetPostThelocalStorage();
 
-      const get = {
-          id :data.id,
-          Title: Title.value,
-          Image:Urlimg.value,
-          description:aboutBlog.value,
-      }
-      ShowPostToDom(get);
-      SaveToLocalstorage(get);
+  const alreadyExists = posts.some((p) => p.id === post.id);
 
-
-  postTitle.value = '';     
-  Urlimg.value = '';     
-  aboutBlog.value = ''; 
-  
+  if (!alreadyExists) {
+    SavePostToLocalstorage(post);
+  }
+  indexlist();
 }
-function SavePostToLocalstorage(){
-
+function SavePostToLocalstorage(gets) {
+  const posts = GetPostThelocalStorage();
+  posts.push(gets);
+  localStorage.setItem("posts", JSON.stringify(posts));
 }
-function loadPosttheLocalStorage(){
 
+function GetPostThelocalStorage() {
+  const tasks = JSON.parse(localStorage.getItem("posts")) || [];
+  return tasks;
 }
-function GetPostThelocalStorage(){
-
+function LoadPostFromLocalStorage() {
+  // gettting the loacl data
+  const posts = GetPostThelocalStorage();
+  posts.forEach((post) => {
+    indexlist(post);
+  });
+}
+function indexlist() {
+  const tasks = JSON.parse(localStorage.getItem("posts")) || []; // replace "yourKey" with the actual key
+  const length = tasks.length;
+  // console.log(length);
+  const span = document.querySelector(".index-watclist");
+  span.textContent = length;
+  return true
 }
 // Events documents 
 toggleBtn.addEventListener("click", function () {
@@ -109,4 +159,5 @@ toggleBtn.addEventListener("click", function () {
 });
 document.addEventListener("DOMContentLoaded",()=>{
   TvshowApi();
+  indexlist();
 })

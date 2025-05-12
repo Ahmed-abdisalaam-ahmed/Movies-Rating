@@ -41,8 +41,25 @@ function moviesList(data) {
         </div>  
         `;
       movieList.appendChild(moviesitem);
-      const btntrailer = moviesitem.querySelector('.btn-trailer')
+      const btntrailer = moviesitem.querySelector('.btn-trailer');
+      const watchlist = moviesitem.querySelector(".btn-watchlist");
       btntrailer.addEventListener('click' , ()=> trailerModel(datas.trailer));
+
+      watchlist.addEventListener("click", () => {
+      showupInLocalStorage(
+        datas,
+        datas.primaryTitle,
+        datas.primaryImage,
+        datas.startYear,
+        datas.endYear,
+        datas.type,
+        datas.genres,
+        datas.averageRating,
+        datas.numVotes,
+        datas.runtimeMinutes,
+        datas.metascore
+      );
+      });
     });
   };
   // model
@@ -73,56 +90,72 @@ window.onclick = function(event){
       stopPlayer();
   }
 }
-// // localStorage
-// function Addingpost(event){
-//   event.preventDefault();
-//   // console.log("help memmmm");
+// LocalStorage
+function showupInLocalStorage(
+  datas,
+  primaryTitle,
+  primaryImage,
+  startYear,
+  endYear,
+  type,
+  genres,
+  averageRating,
+  numVotes,
+  runtimeMinutes,
+  metascore
+) {
+  const post = {
+    id: datas.id,
+    Title: primaryTitle,
+    Image: primaryImage,
+    startYear: startYear,
+    endYear: endYear,
+    type: type,
+    genres: genres,
+    averageRating: averageRating,
+    numVotes: numVotes,
+    runtimeMinutes: runtimeMinutes,
+    metascore: metascore,
+    completed: "false",
+  };
+  const posts = GetPostThelocalStorage();
 
-//     const Title = moviesList.getElementById('movie-title');
-//     const imgMovie = moviesList.getElementById('movie-img');
-//     const movieStaryear = moviesList.getElementById('movieStaryear');
-//     const movieType = moviesList.getElementById('movieType');
-//     const moviedescription  = moviesList.getElementById('movie-description');
-//     const movieRelease  = moviesList.getElementById('movieRelease');
+  const alreadyExists = posts.some((p) => p.id === post.id);
 
-
-//       const get = {
-//           id :data.id,
-//           Title: Title.value,
-//           Image:imgMovie.value,
-//           startYear:movieStaryear.value,
-//           releaseDate:movieRelease.value,
-//           movieType:movieType.value,
-//           description:moviedescription.value,
-//       }
-//       SavePostToLocalstorage(get);
-
-
-//   Title.value = '';     
-//   imgMovie.value = '';     
-//   movieStaryear.value = ''; 
-//   moviedescription.value = '';     
-//   movieRelease.value = '';     
-//   movieType.value = ''; 
-  
-// }
-// function SavePostToLocalstorage(tasks){
-//   const tasks = GetPostThelocalStorage();
-//   tasks.push(post)
-//   localStorage.setItem("media" , JSON.stringify(media));
-// }
-// function loadPosttheLocalStorage(){
-
-// }
-// function GetPostThelocalStorage(){
-//   const tasks = JSON.parse(localStorage.getItem("media")) || [];
-//   return tasks;
-// }
+  if (!alreadyExists) {
+    SavePostToLocalstorage(post);
+  }
+  indexlist();
+}
+function SavePostToLocalstorage(gets) {
+  const posts = GetPostThelocalStorage();
+  posts.push(gets);
+  localStorage.setItem("posts", JSON.stringify(posts));
+}
+function GetPostThelocalStorage() {
+  const tasks = JSON.parse(localStorage.getItem("posts")) || [];
+  return tasks;
+}
+function LoadPostFromLocalStorage() {
+  // gettting the loacl data
+  const posts = GetPostThelocalStorage();
+  posts.forEach((post) => {
+    indexlist(post);
+  });
+}
+function indexlist() {
+  const tasks = JSON.parse(localStorage.getItem("posts")) || []; // replace "yourKey" with the actual key
+  const length = tasks.length;
+  // console.log(length);
+  const span = document.querySelector(".index-watclist");
+  span.textContent = length;
+  return true
+}
 // Event documents 
-  toggleBtn.addEventListener("click", function () {
+toggleBtn.addEventListener("click", function () {
     navbar.classList.toggle("active");
   });
 document.addEventListener("DOMContentLoaded",()=>{
     moviesLoadApi();
-    // Addingpost();
+    indexlist();
   })
