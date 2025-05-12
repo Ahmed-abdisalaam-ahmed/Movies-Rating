@@ -12,27 +12,27 @@ html {
 body {
   background-color:#121212;
   color: #e0e0e0;
-  
+  padding-top: 60px;
 }
 img{
     width: 100%;
 }
 .container{
-  /* max-width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-inline: 1rem; */
+  padding-inline: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 15px;
-  /* max-width: 00px; */
   margin: auto;
 }
 header{
   background-color: #1c1c1c;
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  position: relative;
+  position: fixed;
   z-index: 1000;
-
+  width: 100%;
+  top: 0%;
 }
 header h1 {
   margin: 0;
@@ -80,7 +80,7 @@ nav a:hover {
 .navbar-links li {
     padding: 0 10px;
  }
-.navbar-links a {
+.navbar-links a{
     text-decoration: none;
     font-size: 1em;
     line-height: 60px;
@@ -88,6 +88,42 @@ nav a:hover {
     padding: 0 10px;
     transition: color 0.3s ease;
 }
+#search {
+  display: flex;
+  flex-direction: row-reverse;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 12px;
+  margin-top: 5px;
+  padding: 10px 15px;
+  /* border: none; */
+}
+#search input{
+  background-color: #1e1e1e;
+  border: none;
+  color: white;
+  cursor: text;
+}
+#search input:focus{
+  outline: none;
+}
+#search input:hover{
+  color: white;
+}
+#search .btn-Search{
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  /* border-right: 1px solid rgb(255, 255, 255); */
+  cursor: pointer;
+  
+}
+#search .btn-Search i{
+  color: white;
+}
+#search .btn-Search i:hover{
+  color: #00aaff;
+}
+
 .navbar-links a:hover {
     background-color: #222;
     border-radius: 5px;
@@ -429,6 +465,16 @@ main h1{
   from { opacity: 0; transform: scale(1.10); }
   to { opacity: 1; transform: scale(1); }
 }
+
+@keyframes fadein {
+  from { bottom: 10px; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { bottom: 30px; opacity: 1; }
+  to { bottom: 10px; opacity: 0; }
+}
 /* mobile  */
 @media (max-width: 768px) {
   .navbar {
@@ -481,10 +527,9 @@ main h1{
       float: left;
       padding: 0 15px;
     }
-    .footer-credit {
+    /* .footer-credit {
       
-    }
-  
+    } */
     .footer-credit .col-left,
     .footer-credit .col-right {
       flex: 1 1 50%;

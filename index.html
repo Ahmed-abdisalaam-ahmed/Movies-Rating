@@ -32,20 +32,26 @@
                 <a href="/pages/Po-movies.html" class="he-movTV">Most Popular Movies</a>
               </div>
             </li>
-            <div id="search-container">
-              <input type="text" id="search-input" placeholder="Search for a movie or TV show..." />
-              <button onclick="searchMovie()">Search</button>
-            </div>
-            <div id="search-results"></div>
+            <li>
+              <div id="search">
+                <input type="text" id="search-input" placeholder="Search for a movie or TV show..." />
+                <button class="btn-Search"><i class="fas fa-search"></i></button>
+              </div>
+              <div id="search-results"></div>
+            </li>
             <li><a href="/pages/About.html">About</a></li>
             <li><a href="/pages/watchlist.html"><i class="fa-solid fa-bookmark"></i> WatchList
-              <span class="index-watclist" style="color: aliceblue;"></span>
-            </a>
+              <span class="index-watclist" style="color: aliceblue;"></span></a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+
+  <div class="message-box" style="display: none; position: fixed; top: 50px; right: 10px; background-color: green; color: white; padding: 10px; border-radius: 5px; z-index: 1000;"></div>
+
+
+
 <!-- Hero section -->
     <section id="hero">
       <div class="image-hro">
@@ -61,6 +67,7 @@
         <span class="circles"></span>
       </div>
     </section>
+    
 <!-- main part -->
     <main id="main">
       <h1 class="mov-lis">Movies</h1>    
@@ -82,6 +89,7 @@
         </div> -->
       </section>  
     </main>
+
     <!-- modal -->
     <div id="tvmovie-modal" class="modal">
       <div class="modal-content">
@@ -89,19 +97,20 @@
         <iframe id="tvmovie-player" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
-<!-- landing sadi -->
-<section class="rating-hero">
-  <h1>Find the Best Movies to Rate</h1>
-  <p>Discover, review, and rate movies across top platforms.</p>
 
-  <div class="platform-logos">
-    <a href="javascript:void(0)"><img src="https://m.media-amazon.com/images/G/01/IMDb/brand/guidelines/imdb/IMDb_Android_App_Icon._CB443386390_.png" alt="IMDb"></a>
-    <a href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Rotten_Tomatoes_alternative_logo.svg" alt="Rotten Tomatoes"></a>
-    <a href="javascript:void(0)"><img src="https://a.ltrbxd.com/logos/letterboxd-logo-alt-v-neg-rgb-1000px.png" alt="Letterboxd"></a>
-    <a href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Metacritic_logo.svg" alt="Metacritic"></a>
-    <a href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Logo_of_Flixster.svg" alt="Flixster"></a>
-  </div>
-</section>
+    <!-- landing sadi -->
+    <section class="rating-hero">
+      <h1>Find the Best Movies to Rate</h1>
+      <p>Discover, review, and rate movies across top platforms.</p>
+
+      <div class="platform-logos">
+        <a href="javascript:void(0)"><img src="https://m.media-amazon.com/images/G/01/IMDb/brand/guidelines/imdb/IMDb_Android_App_Icon._CB443386390_.png" alt="IMDb"></a>
+        <a href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Rotten_Tomatoes_alternative_logo.svg" alt="Rotten Tomatoes"></a>
+        <a href="javascript:void(0)"><img src="https://a.ltrbxd.com/logos/letterboxd-logo-alt-v-neg-rgb-1000px.png" alt="Letterboxd"></a>
+        <a href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Metacritic_logo.svg" alt="Metacritic"></a>
+        <a href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Logo_of_Flixster.svg" alt="Flixster"></a>
+      </div>
+    </section>
 
 <!-- Footer part -->
     <footer id="footer" class="footer-area">
@@ -152,7 +161,6 @@
             </div>
       </div>
     </footer>
-
     <script src="/js/script.js"></script>
   </body>
 </html>

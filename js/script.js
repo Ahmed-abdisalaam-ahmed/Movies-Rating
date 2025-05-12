@@ -13,7 +13,7 @@ async function moviesLoadApi() {
     },
   };
   try {
-    const response = await fetch('data/100mov.json');
+    const response = await fetch("data/100mov.json");
     const result = await response.json();
     moviesList(result);
   } catch (error) {
@@ -31,7 +31,7 @@ async function TvshowsApi() {
   };
 
   try {
-    const response = await fetch('data/250tv.json');
+    const response = await fetch("data/250tv.json");
     const result = await response.json();
     TvshowsList(result);
   } catch (error) {
@@ -96,64 +96,52 @@ const movies = [
     metascore: null,
   },
   {
-    "id": "tt0141842",
-    "url": "https://www.imdb.com/title/tt0141842/",
-    "primaryTitle": "The Sopranos",
-    "originalTitle": "The Sopranos",
-    "type": "tvSeries",
-    "description": "New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.",
-    primaryImage: "https://m.media-amazon.com/images/M/MV5BMjRmMTNiMTQtMDg1ZS00MGM1LWE1MGUtYjEzMGFjNWUzOWRkXkEyXkFqcGc@._V1_.jpg",
-    "trailer": "https://www.youtube.com/watch?v=Q8cBFvpqmH0",
-    "contentRating": "TV-MA",
-    "startYear": 1999,
-    "endYear": 2007,
-    "releaseDate": "1999-01-10",
-    "interests": [
-        "Epic",
-        "Gangster",
-        "Crime",
-        "Drama"
+    id: "tt0141842",
+    url: "https://www.imdb.com/title/tt0141842/",
+    primaryTitle: "The Sopranos",
+    originalTitle: "The Sopranos",
+    type: "tvSeries",
+    description:
+      "New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling.",
+    primaryImage:
+      "https://m.media-amazon.com/images/M/MV5BMjRmMTNiMTQtMDg1ZS00MGM1LWE1MGUtYjEzMGFjNWUzOWRkXkEyXkFqcGc@._V1_.jpg",
+    trailer: "https://www.youtube.com/watch?v=Q8cBFvpqmH0",
+    contentRating: "TV-MA",
+    startYear: 1999,
+    endYear: 2007,
+    releaseDate: "1999-01-10",
+    interests: ["Epic", "Gangster", "Crime", "Drama"],
+    countriesOfOrigin: ["US"],
+    externalLinks: [
+      "https://www.facebook.com/TheSopranos",
+      "https://play.max.com/show/818c3d9d-1831-48a6-9583-0364a7f98453",
     ],
-    "countriesOfOrigin": [
-        "US"
+    spokenLanguages: ["en", "it", "ru"],
+    filmingLocations: [
+      "Satin Dolls - 230 State Route 17 S., Lodi, New Jersey, USA",
     ],
-    "externalLinks": [
-        "https://www.facebook.com/TheSopranos",
-        "https://play.max.com/show/818c3d9d-1831-48a6-9583-0364a7f98453"
+    productionCompanies: [
+      {
+        id: "co0008693",
+        name: "Home Box Office (HBO)",
+      },
+      {
+        id: "co0046803",
+        name: "Brad Grey Television",
+      },
+      {
+        id: "co0214340",
+        name: "Brillstein Entertainment Partners",
+      },
     ],
-    "spokenLanguages": [
-        "en",
-        "it",
-        "ru"
-    ],
-    "filmingLocations": [
-        "Satin Dolls - 230 State Route 17 S., Lodi, New Jersey, USA"
-    ],
-    "productionCompanies": [
-        {
-            "id": "co0008693",
-            "name": "Home Box Office (HBO)"
-        },
-        {
-            "id": "co0046803",
-            "name": "Brad Grey Television"
-        },
-        {
-            "id": "co0214340",
-            "name": "Brillstein Entertainment Partners"
-        }
-    ],
-    "budget": null,
-    "grossWorldwide": null,
-    "genres": [
-        "Crime",
-        "Drama"
-    ],
-    "isAdult": false,
-    "runtimeMinutes": null,
-    "averageRating": 9.2,
-    "numVotes": 522396,
-    "metascore": null
+    budget: null,
+    grossWorldwide: null,
+    genres: ["Crime", "Drama"],
+    isAdult: false,
+    runtimeMinutes: null,
+    averageRating: 9.2,
+    numVotes: 522396,
+    metascore: null,
   },
   {
     id: "tt0795176",
@@ -367,66 +355,55 @@ const movies = [
     metascore: 46,
   },
   {
-    "id": "tt31193180",
-    "url": "https://www.imdb.com/title/tt31193180/",
-    "primaryTitle": "Sinners",
-    "originalTitle": "Sinners",
-    "type": "movie",
-    "description": "Trying to leave their troubled lives behind, twin brothers return to their hometown to start again, only to discover that an even greater evil is waiting to welcome them back.",
-    primaryImage: "https://m.media-amazon.com/images/M/MV5BNjIwZWY4ZDEtMmIxZS00NDA4LTg4ZGMtMzUwZTYyNzgxMzk5XkEyXkFqcGc@._V1_.jpg",
-    "trailer": "https://www.youtube.com/watch?v=bKGxHflevuk",
-    "contentRating": "R",
-    "startYear": 2025,
-    "endYear": null,
-    "releaseDate": "2025-04-18",
-    "interests": [
-        "Period Drama",
-        "Supernatural Horror",
-        "Vampire Horror",
-        "Action",
-        "Drama",
-        "Horror",
-        "Thriller"
+    id: "tt31193180",
+    url: "https://www.imdb.com/title/tt31193180/",
+    primaryTitle: "Sinners",
+    originalTitle: "Sinners",
+    type: "movie",
+    description:
+      "Trying to leave their troubled lives behind, twin brothers return to their hometown to start again, only to discover that an even greater evil is waiting to welcome them back.",
+    primaryImage:
+      "https://m.media-amazon.com/images/M/MV5BNjIwZWY4ZDEtMmIxZS00NDA4LTg4ZGMtMzUwZTYyNzgxMzk5XkEyXkFqcGc@._V1_.jpg",
+    trailer: "https://www.youtube.com/watch?v=bKGxHflevuk",
+    contentRating: "R",
+    startYear: 2025,
+    endYear: null,
+    releaseDate: "2025-04-18",
+    interests: [
+      "Period Drama",
+      "Supernatural Horror",
+      "Vampire Horror",
+      "Action",
+      "Drama",
+      "Horror",
+      "Thriller",
     ],
-    "countriesOfOrigin": [
-        "US"
+    countriesOfOrigin: ["US"],
+    externalLinks: ["https://amzn.to/4cNibD5", "https://www.sinnersmovie.com/"],
+    spokenLanguages: ["en"],
+    filmingLocations: ["New Orleans, Louisiana, USA"],
+    productionCompanies: [
+      {
+        id: "co0002663",
+        name: "Warner Bros.",
+      },
+      {
+        id: "co1090055",
+        name: "Domain Entertainment (II)",
+      },
+      {
+        id: "co0843639",
+        name: "Proximity Media",
+      },
     ],
-    "externalLinks": [
-        "https://amzn.to/4cNibD5",
-        "https://www.sinnersmovie.com/"
-    ],
-    "spokenLanguages": [
-        "en"
-    ],
-    "filmingLocations": [
-        "New Orleans, Louisiana, USA"
-    ],
-    "productionCompanies": [
-        {
-            "id": "co0002663",
-            "name": "Warner Bros."
-        },
-        {
-            "id": "co1090055",
-            "name": "Domain Entertainment (II)"
-        },
-        {
-            "id": "co0843639",
-            "name": "Proximity Media"
-        }
-    ],
-    "budget": 90000000,
-    "grossWorldwide": 63507468,
-    "genres": [
-        "Action",
-        "Drama",
-        "Horror"
-    ],
-    "isAdult": false,
-    "runtimeMinutes": 137,
-    "averageRating": 8.2,
-    "numVotes": 25803,
-    "metascore": 84
+    budget: 90000000,
+    grossWorldwide: 63507468,
+    genres: ["Action", "Drama", "Horror"],
+    isAdult: false,
+    runtimeMinutes: 137,
+    averageRating: 8.2,
+    numVotes: 25803,
+    metascore: 84,
   },
   {
     id: "tt0111161",
@@ -494,7 +471,7 @@ updatedterminal();
 
 // movie-list
 function moviesList(data) {
-  const moviefive = data.slice(0,6);
+  const moviefive = data.slice(0, 5);
   const movieList = document.getElementById("movieList");
   movieList.innerHTML = "";
 
@@ -510,21 +487,32 @@ function moviesList(data) {
 
       `;
     movieList.appendChild(moviesitem);
-    const btnDetails = moviesitem.querySelector('.btn-Details');
-    const watchlist = moviesitem.querySelector('.btn-watchlist');
-    btnDetails.addEventListener('click' , ()=> openModel(datas.trailer));
+    const btnDetails = moviesitem.querySelector(".btn-Details");
+    const watchlist = moviesitem.querySelector(".btn-watchlist");
+    btnDetails.addEventListener("click", () => openModel(datas.trailer));
 
     // console.log(datas.trailer)22
-    watchlist.addEventListener("click",()=> {
-      showupInLocalStorage(datas,datas.primaryTitle,datas.primaryImage,datas.startYear,
-        datas.endYear,datas.type,datas.genres,datas.averageRating,datas.numVotes,datas.runtimeMinutes,datas.metascore);
+    watchlist.addEventListener("click", () => {
+      showupInLocalStorage(
+        datas,
+        datas.primaryTitle,
+        datas.primaryImage,
+        datas.startYear,
+        datas.endYear,
+        datas.type,
+        datas.genres,
+        datas.averageRating,
+        datas.numVotes,
+        datas.runtimeMinutes,
+        datas.metascore
+      );
     });
   });
 }
 
 // TV-List
 function TvshowsList(data) {
-  const tvfive = data.slice(47,53);
+  const tvfive = data.slice(47, 52);
   const TvshowsListList = document.querySelector(".TV-grid");
   TvshowsListList.innerHTML = "";
 
@@ -535,103 +523,139 @@ function TvshowsList(data) {
               <img src="${datas.primaryImage}" alt="Movie Poster">
               <h3>${datas.originalTitle}</h3>
               <p>${datas.startYear} • ${datas.interests[0]}, ${datas.interests[1]}</p>
-              <button class="btn-watchlist">WatchList</button> <br>
               <button class="btn-Details">Watch trailer</button>  
+              <button class="btn-watchlist">WatchList</button> <br>
       `;
     TvshowsListList.appendChild(TVitem);
-    const btnDetail = TVitem.querySelector('.btn-Details');
-    btnDetail.addEventListener('click' , ()=> openModel(datas.trailer));
+    const btnDetail = TVitem.querySelector(".btn-Details");
+    const btnwatchlist = TVitem.querySelector(".btn-watchlist");
+    btnDetail.addEventListener("click", () => openModel(datas.trailer));
     // console.log(datas.trailer)
-    const btnwatchlist = TVitem.querySelector('.btn-watchlist');
 
-    btnwatchlist.addEventListener("click",()=> showupInLocalStorage(datas,datas.primaryTitle,datas.primaryImage,datas.startYear,
-      datas.endYear,datas.type,datas.genres,datas.averageRating,datas.numVotes,datas.runtimeMinutes,datas.metascore
-    ));
+    btnwatchlist.addEventListener("click", () =>
+      showupInLocalStorage(
+        datas,
+        datas.primaryTitle,
+        datas.primaryImage,
+        datas.startYear,
+        datas.endYear,
+        datas.type,
+        datas.genres,
+        datas.averageRating,
+        datas.numVotes,
+        datas.runtimeMinutes,
+        datas.metascore
+      )
+    );
   });
-};
+}
 
 // model
-function openModel(trailer){
-  const model = document.querySelector('#tvmovie-modal');
-  const tvmoviePlayer = document.querySelector('#tvmovie-player');
+function openModel(trailer) {
+  const model = document.querySelector("#tvmovie-modal");
+  const tvmoviePlayer = document.querySelector("#tvmovie-player");
 
   const url = new URL(trailer);
   const videoId = url.searchParams.get("v");
   const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
 
-  if(videoId)
+  if (videoId) tvmoviePlayer.src = embedUrl;
+  model.style.display = "block";
 
-  tvmoviePlayer.src = embedUrl;
-  model.style.display = 'block';
-
-  document.querySelector('#close-modal').addEventListener('click' , stopPlayer);
+  document.querySelector("#close-modal").addEventListener("click", stopPlayer);
 }
 
-function stopPlayer(){
-  const model = document.querySelector('#tvmovie-modal');
-  const tvmoviePlayer = document.querySelector('#tvmovie-player');
+function stopPlayer() {
+  const model = document.querySelector("#tvmovie-modal");
+  const tvmoviePlayer = document.querySelector("#tvmovie-player");
 
   tvmoviePlayer.src = "";
   model.style.display = "none";
-
 }
 
-window.onclick = function(event){
+window.onclick = function (event) {
+  const model = document.querySelector("#tvmovie-modal");
 
-  const model = document.querySelector('#tvmovie-modal');
-
-  if (event.target == model){
-      stopPlayer();
+  if (event.target == model) {
+    stopPlayer();
   }
-}
+};
 
 // LocalStorage
-function showupInLocalStorage(datas,primaryTitle,primaryImage,startYear,endYear,type,genres,averageRating,numVotes,runtimeMinutes,metascore){
-
+function showupInLocalStorage(
+  datas,
+  primaryTitle,
+  primaryImage,
+  startYear,
+  endYear,
+  type,
+  genres,
+  averageRating,
+  numVotes,
+  runtimeMinutes,
+  metascore
+) {
   const post = {
     id: datas.id,
-    Title:primaryTitle,
-    Image:primaryImage,
-    startYear:startYear,
-    endYear:endYear,
-    type:type,
-    genres:genres,
-    averageRating:averageRating,
-    numVotes:numVotes,
-    runtimeMinutes:runtimeMinutes,
-    metascore:metascore,
-    completed:"false"
-  }
+    Title: primaryTitle,
+    Image: primaryImage,
+    startYear: startYear,
+    endYear: endYear,
+    type: type,
+    genres: genres,
+    averageRating: averageRating,
+    numVotes: numVotes,
+    runtimeMinutes: runtimeMinutes,
+    metascore: metascore,
+    completed: "false",
+  };
   const posts = GetPostThelocalStorage();
 
-  const alreadyExists = posts.some(p => p.id === post.id);
+  const alreadyExists = posts.some((p) => p.id === post.id);
+
+  const messageBox = document.querySelector(".message-box"); // Add this div in your HTML
 
   if (!alreadyExists) {
     SavePostToLocalstorage(post);
-    
+    messageBox.textContent = `"${primaryTitle}" added to Watchlist!`;
+    messageBox.style.display = "block";
+    messageBox.style.backgroundColor = "green"; // Or use a class for styling
+  } else {
+    messageBox.textContent = `"${primaryTitle}" is already in your Watchlist.`;
+    messageBox.style.display = "block";
+    messageBox.style.backgroundColor = "orange";
   }
 
-}
-function SavePostToLocalstorage(gets){
-  const posts = GetPostThelocalStorage();
-  posts.push(gets)
-  localStorage.setItem("posts" , JSON.stringify(posts));
-}
+  // Auto-hide after 3 seconds
+  setTimeout(() => {
+    messageBox.style.display = "none";
+  }, 3000);
 
-function GetPostThelocalStorage(){
+  indexlist();
+}
+function SavePostToLocalstorage(gets) {
+  const posts = GetPostThelocalStorage();
+  posts.push(gets);
+  localStorage.setItem("posts", JSON.stringify(posts));
+}
+function GetPostThelocalStorage() {
   const tasks = JSON.parse(localStorage.getItem("posts")) || [];
   return tasks;
 }
-function LoadPostFromLocalStorage(){
+function LoadPostFromLocalStorage() {
   // gettting the loacl data
   const posts = GetPostThelocalStorage();
-  posts.forEach(post =>{
-    indexlist(post)
-  })
+  posts.forEach((post) => {
+    indexlist(post);
+  });
 }
-function indexlist(post){
-    const span = document.querySelector('.index-watclist');
-    span.textContent = post[length];
+function indexlist() {
+  const tasks = JSON.parse(localStorage.getItem("posts")) || []; // replace "yourKey" with the actual key
+  const length = tasks.length;
+  // console.log(length);
+  const span = document.querySelector(".index-watclist");
+  span.textContent = length;
+  return true;
 }
 // Events that with documents
 toggleBtn.addEventListener("click", function () {
@@ -642,5 +666,5 @@ document.addEventListener("DOMContentLoaded", () => {
   moviesLoadApi();
   TvshowsApi();
   LoadPostFromLocalStorage();
+  indexlist();
 });
-
