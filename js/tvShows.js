@@ -32,14 +32,15 @@ function TvshowsLists(data) {
                <h4>${datas.releaseDate}</h4>
             </div>
           </div>
-          <div class="btn-details">
-            <button class="btn-watchlist"><i class="fa-solid fa-bookmark" style="color: aliceblue;"> Watch List</i></button>
-            <button class="btn-trailer"><i class="fa-solid fa-film"> Watch trailer</i></button>  
-          </div>
+
         </div>
         <div class="card-discription">
           <p>${datas.description}</p>
         </div>  
+        <div class="btn-details">
+            <button class="btn-watchlist"><i class="fa-solid fa-bookmark" style="color: aliceblue;"> Watch List</i></button>
+            <button class="btn-trailer"><i class="fa-solid fa-film"> Watch trailer</i></button>  
+        </div>
         `;
       TvshowsList.appendChild(tvShowsitem);
       const btntrailer = tvShowsitem.querySelector('.btn-trailer');
