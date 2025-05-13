@@ -181,6 +181,9 @@ nav a:hover {
   border-radius: 5px;
   padding: 10px;
   border-left: 3px solid #00aaff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .media-rating{
@@ -210,6 +213,7 @@ main h1{
   margin-bottom: 1rem;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(33.333% - 1rem);
 }
 .movie-info{
   display: flex;
@@ -224,7 +228,7 @@ main h1{
 }
 .btn-details{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-content: space-between;
 }
 .btn-details button{
@@ -447,6 +451,9 @@ main h1{
     }
     .navbar.active .toggle-button .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
+    }
+    .movie-card{
+      width: 100%;
     }
     @media (min-width: 768px) {
       .footer-widget {
