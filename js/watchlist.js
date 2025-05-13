@@ -48,7 +48,7 @@ function Deletehandle(id , item ,primaryTitle){
 function messageDeleted(title){
   const messageBox = document.querySelector(".message-box"); // Add this div in your HTML
 
-  messageBox.textContent = `${title} Deleted to Watchlist!`;
+  messageBox.textContent = `${title} Deleted in Watchlist!`;
   messageBox.style.display = "block";
   messageBox.style.backgroundColor = "red"; // Or use a class for styling
 
